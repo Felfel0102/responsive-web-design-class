@@ -83,3 +83,22 @@ input[type="submit"] {
     cursor: pointer;
     font-weight: 600;
   }
+
+/* Footer */
+footer {
+    color: white;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  
+a {
+    color: rgb(255, 190, 40)
+  }
+  
+a:hover {
+    color: rgb(255, 128, 0);
+  }
+  
+a:visited {
+    color: white;
+  }  

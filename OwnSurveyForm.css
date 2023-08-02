@@ -40,4 +40,14 @@ body {
 .question {
     margin: 1.5rem 0 0.4rem 0;
     font-size: 1.2rem;
+  }
+  
+.item label {
+    display: block;
+    margin: 0.25rem 0 0 0.2rem;
+    font-weight: 400;
+  }
+
+  .input-checkbox, .input-radio {
+    margin: 0 0.5rem 0 0;
   }  

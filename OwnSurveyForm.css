@@ -41,6 +41,14 @@ body {
     margin: 1.5rem 0 0.4rem 0;
     font-size: 1.2rem;
   }
+ 
+input[type="text"], input[type="email"], input[type="number"], select {
+    margin: 0;
+    font-family: inherit;
+    font-size: 15;
+    min-height: 2em;
+    width: 100%;
+  }
   
 .item label {
     display: block;
@@ -48,6 +56,17 @@ body {
     font-weight: 400;
   }
 
-  .input-checkbox, .input-radio {
+.input-checkbox, .input-radio {
     margin: 0 0.5rem 0 0;
-  }  
+  }
+
+.input-textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 15;
+    min-height: 120px;
+    width: 100%;
+    padding: 0;
+    /* Ha a padding 0.625rem, akkor túllóg a formon. Viszont nélküle sincs középen, de a margin miatt nem a form közepén kéne lennie? Ilyen probléma a fCC oldalán nem volot amikor csináltam, és onnan másoltam ki a kódot. */
+    resize: vertical;
+  }

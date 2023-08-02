@@ -13,3 +13,16 @@ body {
     text-align: center;
     border-radius: 25px 25px 0 0;
 }
+
+/* The form */
+.form {
+    background-color: rgb(90, 51, 0);
+    width: 60vw;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    color: rgb(200, 115, 0);
+    font-size: 1.125rem;
+    border-radius: 15px;
+  }

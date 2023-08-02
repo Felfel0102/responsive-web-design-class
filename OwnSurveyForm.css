@@ -1,5 +1,9 @@
 body {
     background-image: url(coffe-background.jpg);
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 /* The title and description of the survey */
@@ -26,3 +30,14 @@ body {
     font-size: 1.125rem;
     border-radius: 15px;
   }
+
+.name-label, .email-label, .number-label {
+    display: block;
+    margin: 1.5rem 0 0.4rem 0;
+    font-size: 1.2rem;
+  }
+  
+.question {
+    margin: 1.5rem 0 0.4rem 0;
+    font-size: 1.2rem;
+  }  

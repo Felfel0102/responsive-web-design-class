@@ -13,15 +13,15 @@
    </header>
    <form action="" id="survey-form" class="form">
     <div>
-        <label for="" id="name-label">Name:</label>
+        <label for="" id="name-label" class="name-label">Name:</label>
         <input id="name" type="text" placeholder="Enter your name" required>
-        <label for="" id="email-label">Email:</label>
+        <label for="" id="email-label" class="email-label">Email:</label>
         <input id="email" type="email" placeholder="Enter your email" required>
-        <label for="" id="number-label">Age:</label>
+        <label for="" id="number-label" class="number-label">Age:</label>
         <input id="number" type="number" placeholder="Enter your age" min="13" max="100">
     </div>
     <div>
-        <p>Please select your gender:</p>
+        <p class="question">Please select your gender:</p>
         <select name="" id="dropdown">
             <option value="1">Male</option>
             <option value="2">Female</option>
@@ -29,13 +29,13 @@
         </select>
     </div>
     <div>
-        <p>Do you like drinking coffee?</p>
+        <p class="question">Do you like drinking coffee?</p>
         <label for=""><input type="radio" value="absolutely" name="coffee-answer">Absolutely</label>
         <label for=""><input type="radio" value="sometimes" name="coffee-answer">Sometimes</label>
         <label for=""><input type="radio" value="no-way" name="coffee-answer">No way</label>
     </div>
     <div>
-        <p>What type of coffee do you drink?</p>
+        <p class="question">What type of coffee do you drink?</p>
         <label for=""><input type="checkbox" name="" id="" value="black">Black</label>
         <label for=""><input type="checkbox" name="" id="" value="with-milk">With milk</label>
         <label for=""><input type="checkbox" name="" id="" value="with-sugar">With sugar</label>
@@ -46,7 +46,7 @@
         <label for=""><input type="checkbox" name="" id="" value="other">Other</label>
     </div>
     <div>
-        <p>Any other comment:</p>
+        <p class="question">Any other comment:</p>
         <textarea name="" id="" cols="30" rows="10"></textarea>
     </div>
     <div>

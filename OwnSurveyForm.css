@@ -70,3 +70,16 @@ input[type="text"], input[type="email"], input[type="number"], select {
     /* Ha a padding 0.625rem, akkor túllóg a formon. Viszont nélküle sincs középen, de a margin miatt nem a form közepén kéne lennie? Ilyen probléma a fCC oldalán nem volot amikor csináltam, és onnan másoltam ki a kódot. */
     resize: vertical;
   }
+
+input[type="submit"] {
+    display: block;
+    margin: 1em auto;
+    height: 2.5em;
+    font-size: 1.1rem;
+    background-color: rgb(200, 115, 0);
+    border: none;
+    width: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 600;
+  }

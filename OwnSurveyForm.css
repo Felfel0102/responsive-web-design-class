@@ -1,0 +1,15 @@
+body {
+    background-image: url(coffe-background.jpg);
+}
+
+/* The title and description of the survey */
+.header {
+    background-color: rgba(200, 115, 0, 0.75);
+    margin: 0 auto;
+    width: 40vw;
+    max-width: 400px;
+    min-width: 200px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+}

@@ -8,8 +8,18 @@
 </head>
 <body>
    <header>
-    <h1>Own Survey Form</h1>
-    <p>My first certification project</p>
-   </header> 
+    <h1 id="title">Own Survey Form</h1>
+    <p id="description"><em>My first certification project</em></p>
+   </header>
+   <form action="" id="survey-form">
+    <div>
+        <label for="" id="name-label">Name:</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+        <label for="" id="email-label">Email:</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+        <label for="" id="number-label">Age:</label>
+        <input id="number" type="number" placeholder="Enter your age" min="13" max="100">
+    </div>
+   </form>
 </body>
 </html>

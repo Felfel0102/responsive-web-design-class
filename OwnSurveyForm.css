@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
     background-image: url(coffe-background.jpg);
     font-family: sans-serif;
@@ -48,6 +52,7 @@ input[type="text"], input[type="email"], input[type="number"], select {
     font-size: 15;
     min-height: 2em;
     width: 100%;
+    padding: 0.3rem;
   }
   
 .item label {
@@ -66,8 +71,7 @@ input[type="text"], input[type="email"], input[type="number"], select {
     font-size: 15;
     min-height: 120px;
     width: 100%;
-    padding: 0;
-    /* Ha a padding 0.625rem, akkor túllóg a formon. Viszont nélküle sincs középen, de a margin miatt nem a form közepén kéne lennie? Ilyen probléma a fCC oldalán nem volot amikor csináltam, és onnan másoltam ki a kódot. */
+    padding: 0.3rem;
     resize: vertical;
   }
 

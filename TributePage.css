@@ -16,6 +16,7 @@ body {
     max-width: fit-content;
     margin: 20px auto;
     padding: 20px;
+    border-radius: 10px;
   }
 
   h1 {
@@ -43,6 +44,7 @@ body {
     padding: 30px;
     max-width: fit-content;
     margin: auto;
+    border-radius: 10px;
   }
   
   #img-caption {
@@ -56,6 +58,7 @@ body {
     padding: 5px;
     background-color: blanchedalmond;
     max-width: 600px;
+    border-radius: 10px;
 }
 
   #headline {
@@ -95,4 +98,5 @@ body {
     padding: 30px;
     width: fit-content;
     background-color: blanchedalmond;
+    border-radius: 10px;
   }

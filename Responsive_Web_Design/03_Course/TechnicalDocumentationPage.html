@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="TechnicalDocumentationPage.css">
 </head>
 <body>
@@ -38,13 +39,17 @@
       <header class="main-title"><h2>So what is HTML?</h2></header>
       <p>HTML is a <em>markup language</em> that defines the structure of your content. HTML consists of a series of <strong>elements</strong>, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing <strong>tags</strong> can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, take the following line of content:</p>
       <div class="codes">
-        <code>My cat is very grumpy.</code>
+        <pre>
+          <code class="language-html">My cat is very grumpy.</code>
+        </pre>
       </div>
       <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:</p>
       <div class="codes">
-        <code>
-          <span>&lt;</span><span>p</span><span>&gt;</span>My cat is very grumpy.<span>&lt;/</span>p<span>&gt;</span>
-        </code>
+        <pre>
+          <code class="language-html">
+            &lt;p&gt;My cat is very grumpy.&lt;/p&gt;
+          </code>
+        </pre>
       </div>
       <div class="second-section" id="Anatomy_of_an_HTML_element">
         <h3 class="second-titles">Anatomy of an HTML element</h3>
@@ -79,15 +84,19 @@
         <h3 class="second-titles">Nesting elements</h3>
         <p>You can put elements inside other elements too — this is called <strong>nesting</strong>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word "very" in a <code>&lt;strong&gt;</code> element, which means that the word is to be strongly emphasized:</p>
         <div class="codes">
-          <code>
-            <span>&lt;</span>p<span>&gt;</span>My cat is <span>&lt;</span>strong<span>&gt;</span>very<span>&lt;/</span>strong<span>&gt;</span> grumpy.<span>&lt;/</span>p<span>&gt;</span>
-          </code>
+          <pre>
+            <code class="language-html">
+              &lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;
+            </code>
+          </pre>
         </div>
         <p>You do however need to make sure that your elements are properly nested. In the example above, we opened the <code>&lt;p&gt;</code> element first, then the <code>&lt;strong&gt;</code> element; therefore, we have to close the <code>&lt;strong&gt;</code> element first, then the <code>&lt;p&gt;</code> element. The following is <strong>incorrect</strong>:</p>
         <div class="codes">
-          <code>
-            <span>&lt;</span>p<span>&gt;</span>My cat is <span>&lt;</span>strong<span>&gt;</span>very grumpy.<span>&lt;/</span>p<span>&gt;</span><span>&lt;/</span>strong<span>&gt;</span>
-          </code>
+          <pre>
+            <code class="language-html">
+              &lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;
+            </code>
+          </pre>
         </div>
         <p>The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!</p>
       </div>
@@ -95,9 +104,11 @@
         <h3 class="second-titles">Void elements</h3>
         <p>Some elements have no content and are called <strong>void elements</strong>. Take the <code>&lt;img&gt;</code> element that we already have in our HTML page:</p>
         <div class="codes">
-          <code>
-            <span>&lt;</span><span>img</span> <span>src</span><span>=</span><span>"</span>images/firefox-icon.png<span>"</span> <span>alt</span><span>=</span><span>"</span>My test image<span>"</span><span>/&gt;</span>
-          </code>
+          <pre>
+            <code class="language-html">
+              &lt;img src="images/firefox-icon.png" alt="My test image"/&gt;
+            </code>
+          </pre>
         </div>  
         <p>This contains two attributes, but there is no closing <code>&lt;/img&gt;</code> tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.</p>
       </div>
@@ -105,19 +116,21 @@
         <h3 class="second-titles">Anatomy of an HTML document</h3>
         <p>That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our <code>index.html</code> example (which we first met in the <em>Dealing with files</em> article):</p>
         <div class="codes">
-          <code>
-            <span>&lt;!</span><span>doctype</span> <span>html</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>html</span> <span>lang</span><span>=</span><span>"</span><span>en-US</span><span>"</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>head</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>meta</span> <span>charset</span><span>=</span><span>"</span><span>utf-8</span><span>"</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>meta</span> <span>name</span><span>=</span><span>"</span><span>viewport</span><span>"</span> <span>content</span><span>=</span><span>"</span><span>width-devide-width</span><span>"</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>title</span><span>&gt;</span>My test page<span>&lt;/</span><span>title</span><span>&gt;</span><br/>
-            <span>&lt;/</span><span>head</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>body</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>img</span> <span>src</span><span>=</span><span>"</span>images/firefox-icon.png<span>"</span> <span>alt</span><span>=</span><span>"</span>My test image<span>"</span><span>/&gt;</span><br/>
-            <span>&lt;/</span><span>body</span><span>&gt;</span><br/>
-            <span>&lt;/</span><span>html</span><span>&gt;</span><br/>
-          </code>
+          <pre>
+            <code class="language-html">
+              &lt;!doctype html&gt;
+              &lt;html lang="en-US"&gt;
+              &lt;head&gt;
+              &lt;meta charset="utf-8"&gt;
+              &lt;meta name="viewport" content="width-devide-width"&gt;
+              &lt;title&gt;My test page&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+              &lt;img src="images/firefox-icon.png" alt="My test image"/&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
         </div>
         <p>Here we have the following:</p>
         <ul>
@@ -135,22 +148,24 @@
       <header class="main-title"><h2>Images</h2></header>
       <p>Let's turn our attention to the <code>&lt;img&gt;</code> element again:</p>
       <div class="codes">
-          <code>
-            <span>&lt;</span><span>img</span> <span>src</span><span>=</span><span>"</span>images/firefox-icon.png<span>"</span> <span>alt</span><span>=</span><span>"</span>My test image<span>"</span><span>/&gt;</span>
+        <pre>
+          <code class="language-html">
+            &lt;img src="images/firefox-icon.png" alt="My test image"/&gt;
           </code>
-        </div>
-        <p>As we said before, it embeds an image into our page in the position it appears. It does this via the <code>src</code> (source) attribute, which contains the path to our image file.</p>
-        <p>We have also included an <code>alt</code> (alternative) attribute. In the <code>alt</code> attribute, you specify descriptive text for users who cannot see the image, possibly because of the following reasons:</p>
+        </pre>
+      </div>
+      <p>As we said before, it embeds an image into our page in the position it appears. It does this via the <code>src</code> (source) attribute, which contains the path to our image file.</p>
+      <p>We have also included an <code>alt</code> (alternative) attribute. In the <code>alt</code> attribute, you specify descriptive text for users who cannot see the image, possibly because of the following reasons:</p>
         <ol>
           <li>They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.</li>
           <li>Something has gone wrong causing the image not to display. For example, try deliberately changing the path inside your <code>src</code> attribute to make it incorrect. If you save and reload the page, you should see something like this in place of the image:</li>
         </ol>
-        <p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/alt-text-example.png" alt="The words: my test image" /></p>
-        <p>The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."</p>
-        <p>Try coming up with some better alt text for your image now.</p>
-        <div class="notecard">
+      <p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/alt-text-example.png" alt="The words: my test image" /></p>
+      <p>The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."</p>
+      <p>Try coming up with some better alt text for your image now.</p>
+      <div class="notecard">
           <p><strong>Note:</strong> Find out more about accessibility in our accessibility learning module.</p>
-        </div>
+      </div>
     </section>
     <section class="main-section" id="Marking_up_text">
       <header class="main-title"><h2>Marking up text</h2></header>
@@ -159,13 +174,15 @@
         <h3 class="second-titles">Headings</h3>
         <p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, <code>&lt;h1&gt; - &lt;h6&gt;</code>, although you'll commonly only use 3 to 4 at most:</p>
         <div class="codes">
-          <code>
-            <span>&lt;!-- 4 heading levels: --&gt;</span><br/>
-            <span>&lt;</span><span>h1</span><span>&gt;</span>My main title<span>&lt;/</span><span>h1</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>h2</span><span>&gt;</span>My top level heading<span>&lt;/</span><span>h2</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>h3</span><span>&gt;</span>My subheading<span>&lt;/</span><span>h3</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>h4</span><span>&gt;</span>My sub-subheading<span>&lt;/</span><span>h4</span><span>&gt;</span><br/>
-          </code>
+          <pre>
+            <code class="language-html">
+              &lt;!-- 4 heading levels: --&gt;
+              &lt;h1&gt;My main title&lt;/h1&gt;
+              &lt;h2&gt;My top level heading&lt;/h2&gt;
+              &lt;h3&gt;My subheading&lt;/h3&gt;
+              &lt;h4&gt;My sub-subheading&lt;/h4&gt;
+            </code>
+          </pre>
         </div>
         <div class="notecard">
           <p><strong>Note:</strong> Anything in HTML between <code>&lt;!--</code> and <code>--&gt;</code> is an <strong>HTML comment</strong>. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.</p>
@@ -179,9 +196,11 @@
         <h3 class="second-titles">Paragraphs</h3>
         <p>As explained above, <code>&lt;p&gt;</code> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:</p>
         <div class="codes">
-          <code>
-            <span>&lt;</span><span>p</span><span>&gt;</span>This is a single paragraph<span>&lt;/</span><span>p</span><span>&gt;</span>
-          </code>
+          <pre>
+            <code class="language-html">
+            &lt;p&gt;This is a single paragraph&lt;/p&gt;
+            </code>
+        </pre>
         </div>
         <p>Add your sample text (you should have it from <em>What will your website look like?</em>) into one or a few paragraphs, placed directly below your <code>&lt;img&gt;</code> element.</p>
       </div>
@@ -195,25 +214,28 @@
         <p>Each item inside the lists is put inside an <code>&lt;li&gt;</code> (list item) element.</p>
         <p>For example, if we wanted to turn the part of the following paragraph fragment into a list</p>
         <div class="codes">
-          <code>
-            <span>&lt;</span><span>p</span><span>&gt;</span><br/>
-            At Mozilla, we're a global community of technologists, thinkers, and builders<br/>
-             working together…<br/>
-            <span>&lt;/</span><span>p</span><span>&gt;</span>
-          </code>
+          <pre>
+           <code class="language-html">
+            &lt;p&gt;
+            At Mozilla, we're a global community of technologists, thinkers, and builders working together…
+            &lt;/p&gt;
+           </code>
+        </pre>
         </div>
         <p>We could modify the markup to this</p>
         <div class="codes">
-          <code>
-            <span>&lt;</span><span>p</span><span>&gt;</span>At Mozilla, we're a global community of<span>&lt;/</span><span>p</span><span>&gt;</span><br/>
-            <br/>
-            <span>&lt;</span><span>ul</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>li</span><span>&gt;</span>technologists<span>&lt;/</span><span>li</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>li</span><span>&gt;</span>thinkers<span>&lt;/</span><span>li</span><span>&gt;</span><br/>
-            <span>&lt;</span><span>li</span><span>&gt;</span>builders<span>&lt;/</span><span>li</span><span>&gt;</span><br/>
-            <br/>
-             <span>&lt;</span><span>p</span><span>&gt;</span>working together…<span>&lt;/</span><span>p</span><span>&gt;</span><br/><br/>
-          </code>
+          <pre>
+           <code class="language-html">
+            &lt;p>&gt;At Mozilla, we're a global community of&lt;/p&gt;
+            
+            &lt;ul&gt;
+            &lt;li&gt;technologists&lt;/li&gt;
+            &lt;li>&gt;thinkers&lt;/li&gt;
+            &lt;li&gt;builders&lt;/li&gt;
+           
+            &lt;p&gt;working together…&lt;/p&gt;
+           </code>
+         </pre>
         </div>
         <p>Try adding an ordered or unordered list to your example page.</p>
     </section>
@@ -224,23 +246,29 @@
         <li>Choose some text. We chose the text "Mozilla Manifesto".</li>
         <li>Wrap the text in an <code>&lt;a&gt;</code> element, as shown below:
           <div class="codes">
-           <code>
-            <span>&lt;</span><span>a</span><span>&gt;</span>Mozilla Manifesto<span>&lt;/</span><span>a</span><span>&gt;</span>
-           </code>
+           <pre>
+            <code class="language-html">
+              &lt;a&gt;Mozilla Manifesto&lt;/a&gt;
+            </code>
+          </pre>
           </div>          
         </li>
         <li>Give the <code>&lt;a&gt;</code> element an href attribute, as shown below:
           <div class="codes">
-           <code>
-            <span>&lt;</span><span>a</span> <span>href</span><span>=</span><span>""</span><span>&gt;</span>Mozilla Manifesto<span>&lt;/</span><span>a</span><span>&gt;</span>
-           </code>
+            <pre>
+              <code class="language-html">
+                &lt;a href=""&gt;Mozilla Manifesto&lt;/a&gt;
+              </code>
+            </pre>
           </div>
         </li>
         <li>Fill in the value of this attribute with the web address that you want the link to:
           <div class="codes">
-           <code>
-            <span>&lt;</span><span>a</span> <span>href</span><span>=</span><span>"</span><span>https://www.mozilla.org/en-US/about/manifesto/</span><span>"</span><span>&gt;</span>Mozilla Manifesto<span>&lt;/</span><span>a</span><span>&gt;</span>
-           </code>
+            <pre>
+              <code class="language-html">
+                &lt;a href="https://www.mozilla.org/en-US/about/manifesto/"&gt;Mozilla Manifesto&lt;/a&gt;
+              </code>
+            </pre>
           </div>
         </li>
       </ol>
@@ -261,5 +289,7 @@
       <header class="main-title"><h2>Reference</h2></header>
       <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN</p>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js" integrity="sha512-Kit4oPSAREacS6LEF4LGcL6MMlG3O1GqRFDGSX1Vg4JrozGU7hHoMKFkiMWevWq/xmNq8pzMhO2PcZCPHe/gmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

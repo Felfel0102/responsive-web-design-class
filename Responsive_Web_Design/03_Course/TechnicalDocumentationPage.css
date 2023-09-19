@@ -14,6 +14,7 @@ body {
 
 h2 {
   background-color: #9094ba;
+  padding: 0px 10px;
 }
 
 #navbar {
@@ -23,6 +24,8 @@ h2 {
   left: 0px;
   width: 300px;
   height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
   border-right: solid;
   border-color: rgba(0, 22, 22, 0.4);
 }
@@ -38,6 +41,7 @@ header {
 #main-doc header {
   text-align: left;
   margin: 0px;
+  max-width: fit-content;
 }
 
 .main-nav-ul {
@@ -69,13 +73,67 @@ header {
   margin-bottom: 110px;
 }
 
+.codes {
+  margin: 0;
+  width: fit-content;
+  max-width: 90%;
+}
 
+.in-text {
+  background-color: #e5e5e5;
+}
 
+.test-image {
+  border: solid 1px #000000;
+  margin: auto;
+  display: block;
+}
 
-@media (max-width: 400px) {
-  #main-doc {
-    margin-left: -10px;
+pre {
+  max-width: fit-content;
+}
+
+.test-page {
+  max-width: 90%;
+}
+
+@media only screen and (max-width: 815px) {
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
   }
 
- 
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+
+  .big-image {
+    max-width: 100%;
+  }
+  
+  .test-page {
+    max-width: 90%;
+  }
+
+}
+
+@media only screen and (min-width: 816px) {
+  .big-image {
+    max-width: 80%;
+   }
 }
